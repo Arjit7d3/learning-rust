@@ -1,14 +1,18 @@
 use std::io;
 
 fn main() {
-    let mut name: String = String::new();
-    io::stdin().read_line(&mut name).unwrap();
-    name = name.trim().to_string();
+    let mut input: String = String::new();
+    io::stdin().read_line(&mut input).unwrap();
 
-    let mut age: String = String::new();
-    io::stdin().read_line(&mut age).unwrap();
+    let num: u32 = input.trim().parse().unwrap();
 
-    let age: u32 = age.trim().parse().unwrap();
-
-    println!("Hi, {}! You are {} years old.", name, age);
+    if num % 15 == 0 {
+        println!("FizzBuzz");
+    } else if num % 3 == 0 {
+        println!("Fizz");
+    } else if num % 5 == 0 {
+        println!("Buzz");
+    } else {
+        println!("{}", num);
+    }
 }
