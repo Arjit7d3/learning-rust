@@ -9,5 +9,5 @@ fn main() {
     io::stdin().read_line(&mut input).unwrap();
     let b: i32 = input.trim().parse().unwrap();
 
-    println!("{}", a + b);
+    println!("{}", a * b);
 }
