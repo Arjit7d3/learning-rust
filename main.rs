@@ -10,5 +10,5 @@ fn main() {
 
     let age: u32 = age.trim().parse().unwrap();
 
-    println!("Hi, {name}! You are {age} years old.");
+    println!("Hi, {}! You are {} years old.", name, age);
 }
